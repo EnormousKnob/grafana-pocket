@@ -1,11 +1,15 @@
 # Grafana Pocket
 
-一个面向自托管 Grafana 的原生 Android 客户端，让你可以在手机 App 和桌面小组件中查看自己的 Dashboard 与 Panel。
+**Grafana Pocket** 是一个面向自托管 Grafana 的原生 Android 客户端与桌面小组件（Home Screen Widget），让你可以在安卓手机上查看 Grafana Dashboard、单独展示 Panel，并在桌面监控关键指标。
+
+Grafana Pocket is an Android Grafana client, dashboard viewer, and home screen widget for self-hosted Grafana instances. It supports multiple servers, panel selection, Stat widgets, background refresh, and secure local credential storage.
+
+[下载 APK](https://github.com/EnormousKnob/grafana-pocket/releases/tag/v1.5.1) · [查看 Releases](https://github.com/EnormousKnob/grafana-pocket/releases) · [提交问题](https://github.com/EnormousKnob/grafana-pocket/issues)
 
 > [!IMPORTANT]
 > 当前版本仅在三星手机的 **One UI 8.5** 系统上完成实际测试。其他品牌、系统版本和桌面启动器可能存在显示、后台刷新或电池策略差异，欢迎提交 Issue 反馈。
 
-## 功能
+## Grafana Android 客户端功能
 
 - 管理多个远程 Grafana 实例
 - 支持 HTTP 与 HTTPS
@@ -19,6 +23,14 @@
 - Stat 小组件可在后台查询 Grafana 数据并原生绘制数值、阈值颜色和趋势线
 - 小组件右上角可无界面手动刷新
 - 使用 JobScheduler 尝试每 15 分钟自动刷新，实际执行时间由 Android 省电策略决定
+
+## 适用场景
+
+- 在 Android 手机上查看家庭服务器、NAS、软路由或云主机的 Grafana 监控面板
+- 将 CPU、内存、磁盘、网络流量、温度等 Grafana Stat 指标放到手机桌面
+- 同时管理多个自托管 Grafana 实例
+- 从大型 Dashboard 中选择一个或多个关键 Panel 进行移动端展示
+- 使用可缩放的 Grafana Android Widget 快速查看实时监控数据
 
 ## 使用说明
 
@@ -35,7 +47,7 @@
 - `basic`：用于反向代理提供的 HTTP Basic Auth。
 - `token`：使用 Grafana Service Account Token。
 
-## 小组件说明
+## Grafana 桌面小组件
 
 Stat 类型 Panel 可通过 Grafana `/api/ds/query` 在后台获取数据，再由 Android Canvas 绘制数值、阈值颜色和趋势线。手动刷新不会打开 App。
 
@@ -74,6 +86,10 @@ Windows：
 ## 当前版本
 
 `1.5.1`（versionCode 11）
+
+## 相关关键词
+
+Grafana Android、Grafana App、Grafana Client、Grafana Dashboard Viewer、Grafana Widget、Android Dashboard、Android Home Screen Widget、自托管 Grafana、服务器监控、NAS 监控、家庭服务器监控、Prometheus Dashboard、Observability、Monitoring Widget。
 
 ## 支持项目
 
