@@ -9,6 +9,26 @@ Grafana Pocket is an Android Grafana client, dashboard viewer, and home screen w
 > [!IMPORTANT]
 > 当前版本仅在三星手机的 **One UI 8.5** 系统上完成实际测试。其他品牌、系统版本和桌面启动器可能存在显示、后台刷新或电池策略差异，欢迎提交 Issue 反馈。
 
+## 项目定位与使用边界
+
+Grafana Pocket **仅是对用户已有 Grafana 部署的第三方移动端查看与桌面小组件扩展**。使用本 App 前，用户必须已经自行部署并配置好可访问的 Grafana 服务、Dashboard、Panel、数据源及相应访问权限。
+
+- 本项目不包含、不部署、不托管 Grafana 服务端，也不负责创建或维护监控数据源。
+- 本项目不具备独立采集、存储或处理监控指标的能力，不能替代 Grafana、Prometheus 或其他可观测性后端。
+- App 仅代表用户连接其指定的 Grafana 实例，通过 Grafana Web 界面及 HTTP API 读取并展示用户已有的 Dashboard、Panel 和查询结果；部分内容可能在设备本地形成加密配置或小组件快照缓存。
+- 实际可用功能取决于用户的 Grafana 版本、认证方式、数据源、Panel 类型、插件、网络环境和服务器权限。第三方插件或复杂转换不保证能够在桌面小组件中完整复现。
+- Grafana Pocket 是独立的社区项目，与 Grafana Labs 无隶属、授权或背书关系；Grafana 名称及相关商标归其权利人所有。
+
+## 实机效果
+
+三星手机 One UI 8.5 桌面上的 Grafana Pocket 小组件，展示已有 Grafana Panel 的数值与趋势线。图中数据为截图时的状态，实际显示取决于所连接的面板与刷新结果。
+
+<p align="center">
+  <a href="docs/assets/samsung-one-ui-8-5-widget.jpg">
+    <img src="docs/assets/samsung-one-ui-8-5-widget.jpg" alt="Grafana Pocket 在三星 One UI 8.5 桌面显示当前 PC 数量及趋势线的实机截图" width="360">
+  </a>
+</p>
+
 ## Grafana Android 客户端功能
 
 - 管理多个远程 Grafana 实例
