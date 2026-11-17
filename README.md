@@ -74,8 +74,6 @@ Windows：
 .\gradlew.bat assembleDebug
 ```
 
-生产发布前请修改 `applicationId`、配置正式签名，并准备 Google Play 所需的隐私政策、数据安全表单与商店素材。
-
 ## 安全说明
 
 - Grafana 密码和 Token 使用 Android Keystore AES-GCM 加密保存。
