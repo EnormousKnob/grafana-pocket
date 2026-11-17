@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+
+layout.buildDirectory = rootProject.layout.projectDirectory.dir('.build-1.5.1/app')
+
+android {
+    namespace 'com.example.grafanapocket'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.example.grafanapocket'
+        minSdk 26
+        targetSdk 36
+        versionCode 11
+        versionName '1.5.1'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

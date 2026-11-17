@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_bg" android:padding="3dp">
+    <ImageView android:id="@+id/widget_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:clipToOutline="true" android:contentDescription="Grafana panel" />
+    <TextView android:id="@+id/widget_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:background="@drawable/widget_status_bg" android:text="正在加载…" android:textSize="13sp" android:textColor="#F4F5F5" />
+    <ImageButton android:id="@+id/widget_refresh" android:layout_width="30dp" android:layout_height="30dp" android:layout_gravity="top|end" android:layout_margin="5dp" android:background="@drawable/widget_refresh_bg" android:padding="6dp" android:src="@android:drawable/ic_popup_sync" android:alpha="0.86" android:contentDescription="刷新" />
+</FrameLayout>

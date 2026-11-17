@@ -1,0 +1,2 @@
+-keepclassmembers class * extends android.app.Activity { public <init>(); }
+-keepclassmembers class * extends android.appwidget.AppWidgetProvider { public <init>(); }
