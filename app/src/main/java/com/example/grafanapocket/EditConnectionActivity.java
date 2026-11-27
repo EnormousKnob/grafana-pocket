@@ -9,7 +9,7 @@ public class EditConnectionActivity extends Activity {
         auth=new Spinner(this);auth.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,new String[]{"grafana_login","anonymous","basic","token"}));
         user=Ui.input(this,"Grafana 用户名（或 Basic Auth 用户名）");secret=Ui.input(this,"Grafana 密码、Basic 密码或 Service Account Token");secret.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
         path=Ui.input(this,"Dashboard 路径，例如：/d/abc123/home?kiosk");refresh=Ui.input(this,"App 自动刷新秒数（0=由 Grafana 控制）");refresh.setInputType(InputType.TYPE_CLASS_NUMBER);
-        for(android.view.View v:new android.view.View[]{name,url,auth,user,secret,path,refresh})Ui.fill(root,v);
+        LinearLayout server=Ui.card(root,"服务器","连接你已经部署的 Grafana");Ui.fill(server,name);Ui.fill(server,url);LinearLayout login=Ui.card(root,"身份验证","选择与服务器对应的认证方式");Ui.fill(login,auth);Ui.fill(login,user);Ui.fill(login,secret);LinearLayout dashboard=Ui.card(root,"面板与刷新","Dashboard 路径可从浏览器地址栏复制");Ui.fill(dashboard,path);Ui.fill(dashboard,refresh);
         id=getIntent().getStringExtra("id");Connection old=id==null?null:new SecureStore(this).get(id);
         if(old!=null){name.setText(old.name);url.setText(old.url);user.setText(old.user);secret.setText(old.secret);path.setText(old.dashboard);refresh.setText(String.valueOf(old.refreshSeconds));auth.setSelection(Math.max(0,java.util.Arrays.asList("grafana_login","anonymous","basic","token").indexOf(old.auth)));}
         Button save=Ui.button(this,"保存并连接");save.setOnClickListener(v->save());Ui.fill(root,save);

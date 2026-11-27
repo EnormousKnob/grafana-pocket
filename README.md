@@ -4,7 +4,7 @@
 
 Grafana Pocket is an Android Grafana client, dashboard viewer, and home screen widget for self-hosted Grafana instances. It supports multiple servers, panel selection, Stat widgets, background refresh, and secure local credential storage.
 
-[下载 APK](https://github.com/EnormousKnob/grafana-pocket/releases/tag/v1.5.1) · [查看 Releases](https://github.com/EnormousKnob/grafana-pocket/releases) · [提交问题](https://github.com/EnormousKnob/grafana-pocket/issues)
+[下载 APK](https://github.com/EnormousKnob/grafana-pocket/releases/tag/v1.6.0) · [查看 Releases](https://github.com/EnormousKnob/grafana-pocket/releases) · [提交问题](https://github.com/EnormousKnob/grafana-pocket/issues)
 
 > [!IMPORTANT]
 > 当前版本仅在三星手机的 **One UI 8.5** 系统上完成实际测试。其他品牌、系统版本和桌面启动器可能存在显示、后台刷新或电池策略差异，欢迎提交 Issue 反馈。
@@ -103,7 +103,17 @@ Windows：
 
 ## 当前版本
 
-`1.5.1`（versionCode 11）
+`1.6.0`（versionCode 12）
+
+## 1.6.0 界面与更新
+
+- 参考 [双卡网络磁贴](https://github.com/EnormousKnob/dual-sim-network-tiles) 的布局语言，采用深蓝背景、圆角卡片、青色强调色，以及面板 / 设置 / 帮助导航。
+- 连接编辑页按服务器、身份验证、面板与刷新分组；公共按钮、输入框和间距统一。
+- 默认在打开首页时自动检查更新，每 24 小时最多一次，可在「偏好设置」关闭或手动检查。
+- 更新源固定为本仓库 GitHub Releases，使用公开 API，仅识别正式版本及三段式版本号（如 v1.6.0），不会上传 Grafana 地址或凭据。
+- 发现新版本后展示发布说明，由用户确认后通过浏览器下载 APK，再手动安装；不会静默安装。网络不可用或 GitHub 限流时可稍后重试。
+- GitHub APK 延续此前 debug 签名以支持覆盖安装；这不是 Google Play 发布包。后续 Release 请保持签名及附件命名 Grafana-Pocket-v版本号-debug.apk。
+- 既有功能的实机测试范围为三星 One UI 8.5；本次 UI 和更新流程尚待真机验收。
 
 ## 相关关键词
 
